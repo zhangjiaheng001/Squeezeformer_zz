@@ -51,7 +51,7 @@ class Squeezeformer(nn.Module):
         - **outputs** (batch, out_channels, time): Tensor produces by squeezeformer.
         - **output_lengths** (batch): list of sequence output lengths
     """
-11
+
     def __init__(
         self,
         num_classes: int,
