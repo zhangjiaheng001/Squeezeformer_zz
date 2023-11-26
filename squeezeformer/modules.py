@@ -57,9 +57,9 @@ class FeedForwardModule(nn.Module):
 
 1
 
-class RelPositionalE(nn.Module):
+class RelPositionalEncoding(nn.Module):
     def __init__(self, dim=16, M=10000):
-        super(RelPositionalE,self).__init__()
+        super(RelPositionalEncoding,self).__init__()
         self.dim = dim
         self.M = M
 
