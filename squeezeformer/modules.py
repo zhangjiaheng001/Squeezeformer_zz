@@ -57,7 +57,7 @@ class FeedForwardModule(nn.Module):
 
 1
 
-class RelPositionalEncoding(nn.Module):
+'''class RelPositionalEncoding(nn.Module):
     def __init__(self, dim=16, M=10000):
         super(RelPositionalEncoding,self).__init__()
         self.dim = dim
@@ -70,9 +70,9 @@ class RelPositionalEncoding(nn.Module):
         emb = torch.exp(torch.arange(half_dim, device=device) * (-emb))
         emb = x[...,None] * emb[None,...]
         emb = torch.cat((emb.sin(), emb.cos()), dim=-1)
-        return emb
+        return emb'''
 
-'''class RelPositionalEncoding(nn.Module):
+class RelPositionalEncoding(nn.Module):
     """
     Relative positional encoding module.
     Args:
@@ -121,7 +121,7 @@ class RelPositionalEncoding(nn.Module):
             :,
             self.pe.size(1) // 2 - x.size(1) + 1 : self.pe.size(1) // 2 + x.size(1),
         ]
-        return pos_emb'''
+        return pos_emb
 
 
 class ResidualConnectionModule(nn.Module):
